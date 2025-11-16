@@ -1,0 +1,71 @@
+#skills {
+  background-color: $white-color;
+  color: $dark-blue-text;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @include respond(phone) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .skills-wrapper {
+    margin-top: 0;
+
+    @include respond(phone) {
+      margin-top: 2rem;
+    }
+  }
+
+  .skill-category {
+    margin-bottom: 2.5rem;
+
+    @include respond(phone) {
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: $primary-color;
+
+      @include respond(phone) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+
+    @include respond(phone) {
+      gap: 0.6rem;
+    }
+  }
+
+  .skill-tag {
+    background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+    color: $white-color;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+
+    @include respond(phone) {
+      font-size: 0.85rem;
+      padding: 0.5rem 1rem;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(135deg, darken($primary-color, 5%) 0%, darken($secondary-color, 5%) 100%);
+      box-shadow: 0 5px 15px rgba(2, 170, 176, 0.3);
+    }
+  }
+}

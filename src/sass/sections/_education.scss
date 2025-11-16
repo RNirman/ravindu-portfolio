@@ -1,0 +1,100 @@
+#education {
+  background-color: $white-color;
+  color: $dark-blue-text;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin-bottom: 8rem;
+
+  @include respond(phone) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .education-wrapper,
+  .experience-wrapper {
+    margin-top: 3rem;
+
+    @include respond(phone) {
+      margin-top: 2rem;
+    }
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-left: 2px solid $primary-color;
+
+    @include respond(phone) {
+      padding-left: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -6px;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: $primary-color;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      color: $dark-blue-text;
+
+      @include respond(phone) {
+        font-size: 1.1rem;
+      }
+    }
+
+    .institution {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.3rem;
+      color: $primary-color;
+
+      @include respond(phone) {
+        font-size: 1rem;
+      }
+    }
+
+    .date {
+      font-size: 0.9rem;
+      margin-bottom: 0.8rem;
+      font-style: italic;
+      color: $secondary-color;
+    }
+
+    p {
+      color: $dark-grey;
+      line-height: 1.7;
+      font-size: 1.4rem;
+
+      @include respond(phone) {
+        font-size: 1.2rem;
+      }
+    }
+
+    ul {
+      margin-top: 0.5rem;
+      padding-left: 1.2rem;
+      list-style: disc;
+
+      li {
+        color: $dark-grey;
+        margin-bottom: 0.4rem;
+        line-height: 1.6;
+        font-size: 1.4rem;
+
+        @include respond(phone) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
